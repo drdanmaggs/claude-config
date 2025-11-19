@@ -1,7 +1,7 @@
 ---
 name: codebase-scanner
 description: Explores codebase and returns concise findings
-model: sonnet
+model: haiku
 tools: Read, Grep, Glob
 ---
 

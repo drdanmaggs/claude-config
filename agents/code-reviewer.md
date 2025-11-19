@@ -1,7 +1,7 @@
 ---
 name: code-reviewer
 description: Use this agent when code has been written, modified, or committed. Trigger proactively after logical chunks of code are complete, such as:\n\n**Example 1:**\nuser: "Please write a function that checks if a number is prime"\nassistant: "Here is the function:\n```typescript\nfunction isPrime(n: number): boolean {\n  if (n <= 1) return false;\n  for (let i = 2; i <= Math.sqrt(n); i++) {\n    if (n % i === 0) return false;\n  }\n  return true;\n}\n```\nNow let me use the code-reviewer agent to review this implementation."\n\n**Example 2:**\nuser: "I've just finished implementing the user authentication flow"\nassistant: "I'll use the code-reviewer agent to review the authentication implementation for security issues, proper error handling, and code quality."\n\n**Example 3:**\nuser: "Can you refactor the payment processing module?"\nassistant: "I'll refactor the payment processing module now."\n[After making changes]\nassistant: "The refactoring is complete. Let me use the code-reviewer agent to ensure the changes maintain code quality and don't introduce bugs."\n\n**Example 4:**\nuser: "Add validation to the form submission"\nassistant: "I've added the validation logic. I'm going to use the code-reviewer agent to check for edge cases and proper error handling."
-model: sonnet
+model: haiku
 color: purple
 ---
 

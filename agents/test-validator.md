@@ -1,6 +1,6 @@
 ---
 description: Verify implementations through automated testing
-model: sonnet
+model: haiku
 tools: Read, Grep, Glob, Bash(npm test:*), Bash(pytest:*), mcp__puppeteer__*, mcp__supabase__*
 ---
 

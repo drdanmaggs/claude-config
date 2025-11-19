@@ -1,7 +1,7 @@
 ---
 name: documentation-maintainer
 description: Maintains CLAUDE.md under 2,000 tokens and organizes docs appropriately
-model: claude-sonnet-4-20250514
+model: haiku
 tools: Read, Write, Edit, Grep, Glob
 ---
 
