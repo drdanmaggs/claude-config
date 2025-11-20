@@ -1,6 +1,6 @@
 ---
 name: code-reviewer
-description: Use this agent when code has been written, modified, or committed. Trigger proactively after logical chunks of code are complete, such as:\n\n**Example 1:**\nuser: "Please write a function that checks if a number is prime"\nassistant: "Here is the function:\n```typescript\nfunction isPrime(n: number): boolean {\n  if (n <= 1) return false;\n  for (let i = 2; i <= Math.sqrt(n); i++) {\n    if (n % i === 0) return false;\n  }\n  return true;\n}\n```\nNow let me use the code-reviewer agent to review this implementation."\n\n**Example 2:**\nuser: "I've just finished implementing the user authentication flow"\nassistant: "I'll use the code-reviewer agent to review the authentication implementation for security issues, proper error handling, and code quality."\n\n**Example 3:**\nuser: "Can you refactor the payment processing module?"\nassistant: "I'll refactor the payment processing module now."\n[After making changes]\nassistant: "The refactoring is complete. Let me use the code-reviewer agent to ensure the changes maintain code quality and don't introduce bugs."\n\n**Example 4:**\nuser: "Add validation to the form submission"\nassistant: "I've added the validation logic. I'm going to use the code-reviewer agent to check for edge cases and proper error handling."
+description: Expert code review for security-sensitive code, complex logic, or when explicitly requested. DO NOT auto-invoke - only use when user specifically asks for review or when handling authentication, payments, or critical business logic.
 model: haiku
 color: purple
 ---
@@ -104,20 +104,3 @@ Provide your review in a clear, organised format:
 ```
 
 Your goal is to catch issues before they become problems whilst empowering the developer to write better code. Be a helpful colleague, not a gatekeeper.
-```
-
-## Key Changes Made
-
-1. **Added Step 2** - "CRITICAL: Verify Build and Lint Status" that runs FIRST
-2. **Explicit commands** - Shows exactly what to run (`npm run build`, `npm run lint`, `npm run typecheck`)
-3. **Stop on failure** - Instructions to halt review if build fails
-4. **Updated output format** - Now includes Build & Lint Status section at the top
-5. **Reordered Critical Issues** - Build/lint failures are now explicitly the first critical issues
-
-## Why This Works
-
-The subagent now follows the **fail-fast principle**:
-```
-Changes detected → Build → Lint → Type Check → Manual Review
-                      ↓        ↓         ↓
-                   [FAIL] → Report & Stop

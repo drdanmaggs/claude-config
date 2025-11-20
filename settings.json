@@ -44,7 +44,8 @@
       "Bash(cat:*)",
       "Bash(grep:*)",
       "Bash(find:*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(xargs kill:*)"
     ],
     "ask": [
       "Bash(git push origin main)",
