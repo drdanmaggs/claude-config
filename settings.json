@@ -14,7 +14,9 @@
       "mcp__github__create_branch",
       "mcp__github__create_or_update_file",
       "mcp__github__get_issue",
+      "mcp__github__get_pull_request",
       "mcp__github__fork_repository",
+      "mcp__filesystem__read_multiple_files",
       "Bash(git pull:*)",
       "Bash(git fetch:*)",
       "Bash(git checkout:*)",
@@ -24,6 +26,8 @@
       "Bash(git status)",
       "Bash(git diff)",
       "Bash(git log:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git push:*)",
       "Bash(gh repo view:*)",
       "Bash(gh issue list:*)",
       "Bash(gh issue view:*)",
@@ -32,6 +36,8 @@
       "Bash(gh pr view:*)",
       "Bash(gh pr checks:*)",
       "Bash(npm:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run lint:*)",
       "Bash(npx:*)",
       "Bash(node:*)",
       "Bash(ls:*)",
@@ -41,32 +47,21 @@
       "WebSearch"
     ],
     "ask": [
-      "Bash(git push*)",
+      "Bash(git push origin main)",
+      "Bash(git push origin master)",
       "Bash(gh pr create:*)",
       "Bash(gh pr merge:*)",
-      "Bash(gh issue create:*)",
-      "Write(package.json)",
-      "Write(package-lock.json)"
+      "Write(package.json)"
     ],
     "deny": [
       "Read(./.env*)",
       "Read(./secrets/**)",
       "Bash(sudo*)",
       "Bash(rm -rf*)",
-      "Bash(git push origin main)",
       "Bash(npm publish)"
     ]
   },
   "enabledPlugins": {
-    "git-workflow@claude-code-templates": true,
-    "supabase-toolkit@claude-code-templates": true,
-    "nextjs-vercel-pro@claude-code-templates": true,
-    "testing-suite@claude-code-templates": true,
-    "security-pro@claude-code-templates": true,
-    "ai-ml-toolkit@claude-code-templates": true,
-    "devops-automation@claude-code-templates": true,
-    "documentation-generator@claude-code-templates": true,
-    "performance-optimizer@claude-code-templates": true,
-    "project-management-suite@claude-code-templates": true
-  }
+  },
+  "alwaysThinkingEnabled": true
 }

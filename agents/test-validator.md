@@ -42,6 +42,16 @@ Based on changes, identify what needs testing:
 - Edge cases
 - Error scenarios
 
+## How to Spawn Tasks
+
+Use this syntax for each Task:
+
+Task(api-endpoint-tester): "Your job: Test API endpoints..."
+
+Task(ui-browser-tester): "Your job: Test UI behavior..."
+
+Wait for ALL Tasks to complete, then synthesise.
+
 ## Stage 3: Spawn Parallel Test Tasks
 
 ### Task(api-endpoint-tester)

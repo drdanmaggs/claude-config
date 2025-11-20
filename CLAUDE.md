@@ -20,6 +20,7 @@
 - **Tailwind CSS 4:** `~/.claude/docs/tailwind4guide.md` - Implementation patterns, design tokens, migration
 - **Design Token Philosophy:** `~/.claude/docs/design-tokens.md` - Semantic naming, consistency principles, when to break rules
 - **Catalyst Components:** `~/.claude/docs/catalyst_master.md` - We use Catalyst Components across all codebases
+- **AI Streaming:** `~/.claude/docs/ai-streaming-vercel-sdk.md` - Vercel AI SDK streaming pattern for Next.js + Anthropic
 - **MCP Server Configuration Guide:** `~/.claude/docs/MCP-Server-Configuration-Guide.md` - How to configure MCP servers
 
 ## Project Documentation
