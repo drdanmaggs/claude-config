@@ -107,7 +107,7 @@ export const Link = forwardRef(function Link(
 
 **Implementation**:
 ```tsx
-import { Button } from '@/components/button'
+import { Button } from '@/components/ui/button'
 import { PlusIcon } from '@heroicons/react/16/solid'
 
 // Basic button
@@ -154,8 +154,8 @@ import { PlusIcon } from '@heroicons/react/16/solid'
 
 **Implementation**:
 ```tsx
-import { Field, Label, Description, ErrorMessage } from '@/components/fieldset'
-import { Input, InputGroup } from '@/components/input'
+import { Field, Label, Description, ErrorMessage } from '@/components/ui/fieldset'
+import { Input, InputGroup } from '@/components/ui/input'
 import { MagnifyingGlassIcon } from '@heroicons/react/16/solid'
 
 // Basic with label
@@ -201,7 +201,7 @@ const [name, setName] = useState('')
 
 **Implementation**:
 ```tsx
-import { Textarea } from '@/components/textarea'
+import { Textarea } from '@/components/ui/textarea'
 
 <Field>
   <Label>Description</Label>
@@ -219,7 +219,7 @@ import { Textarea } from '@/components/textarea'
 
 **Implementation**:
 ```tsx
-import { Select } from '@/components/select'
+import { Select } from '@/components/ui/select'
 
 <Field>
   <Label>Project status</Label>
@@ -244,7 +244,7 @@ import { Select } from '@/components/select'
 
 **Implementation**:
 ```tsx
-import { Combobox, ComboboxOption, ComboboxLabel, ComboboxDescription } from '@/components/combobox'
+import { Combobox, ComboboxOption, ComboboxLabel, ComboboxDescription } from '@/components/ui/combobox'
 import { Avatar } from '@/components/avatar'
 
 <Field>
@@ -275,7 +275,7 @@ import { Avatar } from '@/components/avatar'
 
 **Implementation**:
 ```tsx
-import { Listbox, ListboxOption, ListboxLabel, ListboxDescription } from '@/components/listbox'
+import { Listbox, ListboxOption, ListboxLabel, ListboxDescription } from '@/components/ui/listbox'
 
 <Field>
   <Label>Priority</Label>
@@ -309,7 +309,7 @@ import { Listbox, ListboxOption, ListboxLabel, ListboxDescription } from '@/comp
 
 **Implementation**:
 ```tsx
-import { Checkbox, CheckboxField, CheckboxGroup } from '@/components/checkbox'
+import { Checkbox, CheckboxField, CheckboxGroup } from '@/components/ui/checkbox'
 
 // Single checkbox
 <CheckboxField>
@@ -354,7 +354,7 @@ import { Checkbox, CheckboxField, CheckboxGroup } from '@/components/checkbox'
 
 **Implementation**:
 ```tsx
-import { Radio, RadioField, RadioGroup } from '@/components/radio'
+import { Radio, RadioField, RadioGroup } from '@/components/ui/radio'
 
 <RadioGroup name="resale" defaultValue="permit">
   <RadioField>
@@ -381,7 +381,7 @@ import { Radio, RadioField, RadioGroup } from '@/components/radio'
 
 **Implementation**:
 ```tsx
-import { Switch, SwitchField, SwitchGroup } from '@/components/switch'
+import { Switch, SwitchField, SwitchGroup } from '@/components/ui/switch'
 
 <SwitchField>
   <Label>Allow notifications</Label>
@@ -418,7 +418,7 @@ import { Switch, SwitchField, SwitchGroup } from '@/components/switch'
 
 **Implementation**:
 ```tsx
-import { Field, FieldGroup, Fieldset, Label, Legend, Description, ErrorMessage } from '@/components/fieldset'
+import { Field, FieldGroup, Fieldset, Label, Legend, Description, ErrorMessage } from '@/components/ui/fieldset'
 
 <Fieldset>
   <Legend>Shipping details</Legend>
@@ -458,7 +458,7 @@ import { Field, FieldGroup, Fieldset, Label, Legend, Description, ErrorMessage }
 
 **Implementation**:
 ```tsx
-import { Navbar, NavbarItem, NavbarSection, NavbarSpacer } from '@/components/navbar'
+import { Navbar, NavbarItem, NavbarSection, NavbarSpacer } from '@/components/ui/navbar'
 import { MagnifyingGlassIcon } from '@heroicons/react/20/solid' // Note: 20×20 for nav
 
 <Navbar>
@@ -493,7 +493,7 @@ import { MagnifyingGlassIcon } from '@heroicons/react/20/solid' // Note: 20×20 
 
 **Implementation**:
 ```tsx
-import { Sidebar, SidebarBody, SidebarItem, SidebarLabel, SidebarSection } from '@/components/sidebar'
+import { Sidebar, SidebarBody, SidebarItem, SidebarLabel, SidebarSection } from '@/components/ui/sidebar'
 import { HomeIcon } from '@heroicons/react/20/solid' // 20×20 for sidebar
 
 <Sidebar>
@@ -517,7 +517,7 @@ import { HomeIcon } from '@heroicons/react/20/solid' // 20×20 for sidebar
 
 **SidebarLayout**: Desktop sidebar with mobile navbar
 ```tsx
-import { SidebarLayout } from '@/components/sidebar-layout'
+import { SidebarLayout } from '@/components/ui/sidebar-layout'
 
 <SidebarLayout 
   sidebar={<Sidebar>{/* sidebar content */}</Sidebar>}
@@ -529,7 +529,7 @@ import { SidebarLayout } from '@/components/sidebar-layout'
 
 **StackedLayout**: Horizontal navbar with optional sidebar
 ```tsx
-import { StackedLayout } from '@/components/stacked-layout'
+import { StackedLayout } from '@/components/ui/stacked-layout'
 
 <StackedLayout navbar={<Navbar>{/* navigation */}</Navbar>}>
   {/* page content */}
@@ -553,7 +553,7 @@ import { StackedLayout } from '@/components/stacked-layout'
 
 **Implementation**:
 ```tsx
-import { Pagination, PaginationGap, PaginationList, PaginationNext, PaginationPage, PaginationPrevious } from '@/components/pagination'
+import { Pagination, PaginationGap, PaginationList, PaginationNext, PaginationPage, PaginationPrevious } from '@/components/ui/pagination'
 
 <Pagination>
   <PaginationPrevious href="?page=2" />
@@ -587,7 +587,7 @@ import { Pagination, PaginationGap, PaginationList, PaginationNext, PaginationPa
 
 **Implementation**:
 ```tsx
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/table'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
 
 <Table className="[--gutter:theme(spacing.6)] sm:[--gutter:theme(spacing.8)]">
   <TableHead>
@@ -622,7 +622,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 
 **Implementation**:
 ```tsx
-import { DescriptionDetails, DescriptionList, DescriptionTerm } from '@/components/description-list'
+import { DescriptionDetails, DescriptionList, DescriptionTerm } from '@/components/ui/description-list'
 
 <DescriptionList>
   <DescriptionTerm>Customer</DescriptionTerm>
@@ -653,8 +653,8 @@ import { DescriptionDetails, DescriptionList, DescriptionTerm } from '@/componen
 
 **Implementation**:
 ```tsx
-import { Dialog, DialogTitle, DialogDescription, DialogBody, DialogActions } from '@/components/dialog'
-import { Button } from '@/components/button'
+import { Dialog, DialogTitle, DialogDescription, DialogBody, DialogActions } from '@/components/ui/dialog'
+import { Button } from '@/components/ui/button'
 
 const [isOpen, setIsOpen] = useState(false)
 
@@ -701,7 +701,7 @@ const [isOpen, setIsOpen] = useState(false)
 
 **Implementation**:
 ```tsx
-import { Dropdown, DropdownButton, DropdownMenu, DropdownItem, DropdownSection, DropdownHeading, DropdownDivider } from '@/components/dropdown'
+import { Dropdown, DropdownButton, DropdownMenu, DropdownItem, DropdownSection, DropdownHeading, DropdownDivider } from '@/components/ui/dropdown'
 import { EllipsisHorizontalIcon, PencilIcon, TrashIcon } from '@heroicons/react/16/solid'
 
 <Dropdown>
@@ -740,7 +740,7 @@ import { EllipsisHorizontalIcon, PencilIcon, TrashIcon } from '@heroicons/react/
 
 **Implementation**:
 ```tsx
-import { Badge, BadgeButton } from '@/components/badge'
+import { Badge, BadgeButton } from '@/components/ui/badge'
 
 // Static badge
 <Badge color="lime">Active</Badge>
@@ -764,7 +764,7 @@ import { Badge, BadgeButton } from '@/components/badge'
 
 **Implementation**:
 ```tsx
-import { Text, TextLink, Strong, Code } from '@/components/text'
+import { Text, TextLink, Strong, Code } from '@/components/ui/text'
 
 <Text>
   This feature requires the <Strong>Business Plan</Strong>. 
@@ -784,7 +784,7 @@ import { Text, TextLink, Strong, Code } from '@/components/text'
 
 **Implementation**:
 ```tsx
-import { Avatar, AvatarButton } from '@/components/avatar'
+import { Avatar, AvatarButton } from '@/components/ui/avatar'
 
 // Basic avatar
 <Avatar 
@@ -817,7 +817,7 @@ import { Avatar, AvatarButton } from '@/components/avatar'
 
 **Implementation**:
 ```tsx
-import { Divider } from '@/components/divider'
+import { Divider } from '@/components/ui/divider'
 
 <Divider />
 ```
@@ -1242,7 +1242,7 @@ function Application() {
 ### Bundle Size Management
 ```typescript
 // Only import what you need
-import { Button } from '@/components/button'
+import { Button } from '@/components/ui/button'
 // Not: import * from '@/components'
 ```
 
